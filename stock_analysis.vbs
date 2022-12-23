@@ -1,4 +1,3 @@
-Attribute VB_Name = "Module1"
 Sub StockAnalysis()
 
     Dim i, wsCount As Integer
@@ -22,7 +21,7 @@ End Sub
 Private Sub FormatSheet()
 ' Apply number and color formats
     
-    Dim i, rNum As Integer
+    Dim i, rNum As Long
     
     rNum = Range("J1").End(xlDown).Row
     
@@ -47,7 +46,7 @@ End Sub
 Private Sub FillTemplate()
 ' Populates column I with the unique ticker names from column A
 
-    Dim i, t, v, rNum As Integer
+    Dim i, t, v, rNum As Long
     Dim oVal, cVal As Double
     Dim ticker As String
     Dim stkVol As LongLong
@@ -97,7 +96,7 @@ End Sub
 Private Sub PolarValues()
 ' Calculates the greatest % increase, % decrease and stock volume
 
-    Dim i, rNum As Integer
+    Dim i, rNum As Long
     Dim pctInc, pctDec As Double
     Dim stkVol As LongLong
     
